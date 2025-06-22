@@ -42,7 +42,7 @@ function ThemeSwitcher() {
 
 export default function Navbar() {
   return (
-    <nav className={styles.navbar} style={{background:'transparent', color:'var(--color-navbar-fg)'}}>
+    <nav className={styles.navbar} >
       <div className={styles.logoArea}>
           {/* Light Mode Logo */}
           <Image
@@ -64,11 +64,18 @@ export default function Navbar() {
       </div>
       <div className={styles.linksArea}>
         <a href="#" className={styles.link}>Home</a>
-        <a href="#about" className={styles.link}>About</a>
-        <a href="#contact" className={styles.link}>Contact</a>
-        <ThemeSwitcher />
-        <a href="#contact" className={styles.contactButton}>Contact Us</a>
-      </div>
+        <a href="#" className={styles.link}>About Us</a>
+        <a href="#" className={styles.link}>case studies</a>
+        <a href="#" className={styles.link}>services</a>
+        <a href="#" className={styles.link}>blog</a>
+        <a href="#" className={styles.link}>careers</a>
+        </div>
+        <div className="nav-theme-switcher-div">
+          <ThemeSwitcher />
+        </div>
+        <div className="nav-contact-div">
+          <a href="#contact" className={styles.contactButton}>Contact Us</a>
+        </div>
     </nav>
   );
 } 
