@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
 import Image from "next/image";
+import CustomizedSwitches from "./ThemeSwitcher";
 
 function ThemeSwitcher() {
   const [theme, setTheme] = useState("light");
@@ -70,10 +71,11 @@ export default function Navbar() {
         <a href="#" className={styles.link}>blog</a>
         <a href="#" className={styles.link}>careers</a>
         </div>
-        <div className="nav-theme-switcher-div">
+        <div className={styles.navThemeSwitcherDiv} >
+          <CustomizedSwitches />
           <ThemeSwitcher />
         </div>
-        <div className="nav-contact-div">
+        <div className={styles.navContactDiv} >
           <a href="#contact" className={styles.contactButton}>Contact Us</a>
         </div>
     </nav>
